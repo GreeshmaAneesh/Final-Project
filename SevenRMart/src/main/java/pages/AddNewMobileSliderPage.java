@@ -1,12 +1,9 @@
 package pages;
 
-import java.awt.AWTException;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import utilities.FileUploadUtility;
 import utilities.GeneralUtility;
 import utilities.PageUtility;
@@ -32,7 +29,6 @@ public class AddNewMobileSliderPage {
 
 public AddNewMobileSliderPage clickOnMobileSlidebarmenu()
 {
-	
 	mobileSliderMenu.click();
 	return this;
 }

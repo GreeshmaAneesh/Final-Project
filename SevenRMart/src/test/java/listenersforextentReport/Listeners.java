@@ -17,19 +17,17 @@ public class Listeners extends Base implements ITestListener{
 
 	ExtentReports extent = ExtendReportUtility.createExtentReports();
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
-	public void onTestStart(ITestResult result) {
-
+	
+	public void onTestStart(ITestResult result) 
+	{
 		ITestListener.super.onTestStart(result);
 		test = extent.createTest(result.getMethod().getMethodName());
 		extentTest.set(test);
-
 	}
-
-	public void onTestSuccess(ITestResult result) {
-
+	public void onTestSuccess(ITestResult result) 
+	{
 		ITestListener.super.onTestSuccess(result);
 		extentTest.get().log(Status.PASS, "Test Passed");
-
 	}
 	public void onTestFailure(ITestResult result) {
 
